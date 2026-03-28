@@ -1,15 +1,16 @@
 # LLM Arbiter — Backend Dependencies
-# Keep this minimal — only what the backend actually uses
 
 # Web Framework
 fastapi==0.128.0
 uvicorn[standard]==0.40.0
 pydantic==2.12.5
 
-# HTTP client (used by all providers)
+# HTTP client
 httpx==0.28.1
 
-# AI / ML — sentence-transformers pulls torch automatically
+# AI / ML
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.1.0+cpu
 sentence-transformers==3.4.1
 scikit-learn==1.6.1
 numpy==2.2.6
